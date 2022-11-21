@@ -9,15 +9,15 @@ DB_HOST = "localhost"
 DB_NAME = "assignment_2"
 DB_USER = "postgres"
 DB_PASS = "Inabatqueen16"
-app.config = {'postgres://lnaivryznizdhd:9e1be21e9f653d810f7c10af6e4f64367ae19e9f9872b376f774be27e99fb3ed@ec2-23-20-140-229.compute-1.amazonaws.com:5432/d1hclvcm2iglvr'}
+
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://pvpygtzphxggsx:0e1a5e46375e700d5d90aa1274e8215680750a692be37fac0eb2113e23e896bd@ec2-52-3-200-138.compute-1.amazonaws.com:5432/d44818ajt6qune"
 conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)
 #disease_type
 @app.route('/')
 #disease_type
 def Index():
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-    names = {'disease_type', 'country', 'disease', 'discover', 'users', 'public_servant',
-    'doctor', 'specialize', 'record'}
+    
     dt = "SELECT * FROM disease_type"
     cur.execute(dt)
     list_disease_types= cur.fetchall()
