@@ -9,7 +9,7 @@ DB_HOST = "localhost"
 DB_NAME = "assignment_2"
 DB_USER = "postgres"
 DB_PASS = "Inabatqueen16"
- 
+app.config = {'postgres://lnaivryznizdhd:9e1be21e9f653d810f7c10af6e4f64367ae19e9f9872b376f774be27e99fb3ed@ec2-23-20-140-229.compute-1.amazonaws.com:5432/d1hclvcm2iglvr'}
 conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)
 #disease_type
 @app.route('/')
