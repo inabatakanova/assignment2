@@ -10,7 +10,7 @@ DB_NAME = "assignment_2"
 DB_USER = "postgres"
 DB_PASS = "Inabatqueen16"
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://pvpygtzphxggsx:0e1a5e46375e700d5d90aa1274e8215680750a692be37fac0eb2113e23e896bd@ec2-52-3-200-138.compute-1.amazonaws.com:5432/d44818ajt6qune"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://yxcstvxvnlhcfk:5194f8b3b211f63f1196d8c111460151877a30d5a600e839df53a5e412245d44@ec2-54-160-109-68.compute-1.amazonaws.com:5432/d4ft9a9d64rkcu"
 conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)
 #disease_type
 @app.route('/')
